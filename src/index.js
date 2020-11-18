@@ -3,12 +3,28 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import { BrowserRouter } from 'react-router-dom';
+import { createMuiTheme, ThemeProvider } from '@material-ui/core/styles';
 
+
+// const theme = createMuiTheme({
+//   breakpoints: {
+//     values: {
+//       xs: 769,
+//       sm: 896,
+//       md: 992,
+//       lg: 1252,
+//       xl: 1300,
+//     },
+//   },
+// })
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+	<BrowserRouter>
+		{/* <ThemeProvider > */}
+			<App />
+		{/* </ThemeProvider> */}
+	</BrowserRouter>,
+	document.getElementById('root')
 );
 
 // If you want your app to work offline and load faster, you can change
