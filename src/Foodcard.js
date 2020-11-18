@@ -3,14 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
 import Typography from '@material-ui/core/Typography';
 import CardHeader from '@material-ui/core/CardHeader';
-import Avatar from '@material-ui/core/Avatar';
 import IconButton from '@material-ui/core/IconButton';
-import ShareIcon from '@material-ui/icons/Share';
 import CardMedia from '@material-ui/core/CardMedia';
-import MenuDishes from './img/background.jpeg';
 import AddBoxIcon from '@material-ui/icons/AddBox';
 
 const useStyles = makeStyles({
@@ -25,7 +21,6 @@ const useStyles = makeStyles({
 		borderRadius: '5px',
 		// marginLeft: '15px',
 		backgroundSize: 'cover',
-		
 	},
 	root: {
 		margin: '30px',
