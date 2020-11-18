@@ -19,7 +19,7 @@ const useStyles = makeStyles({
 	cardMediaPic: {
 		height: '350px',
 		borderRadius: '5px',
-		// marginLeft: '15px',
+		// marginLeft: '15px' testing,
 		backgroundSize: 'cover',
 	},
 	root: {
