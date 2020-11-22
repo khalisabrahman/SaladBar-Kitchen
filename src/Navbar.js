@@ -28,6 +28,10 @@ const useStyles = makeStyles((theme) => ({
 			height: '60px',
 			alignItems: 'flex-end',
 		},
+		[theme.breakpoints.up('xl')]: {
+			height: '60px',
+			alignItems: 'center',
+		}
 	},
 	title: {
 		paddingLeft: '5px',
@@ -71,9 +75,16 @@ const useStyles = makeStyles((theme) => ({
 			height: '150.156px',
 			flexDirection: 'column',
 		},
-		// [theme.breakpoints.up('md')]: {
-		// 	height: '124.781px'
-		// },
+		[theme.breakpoints.up('md')]: {
+			height: '124.781px'
+		},
+		[theme.breakpoints.up('lg')]: {
+			height: '108.781px'
+		},
+		[theme.breakpoints.up('xl')]: {
+			height: '41px',
+			flexDirection: 'row'
+		},
 	},
 }));
 
