@@ -27,27 +27,27 @@ export default [
     {
         title: 'Brocolli Salad',
         imageUrl: BrocolliSalad,
-        description: "Juicy, ripe tomatoes and creamy mozzarella. Topped with fresh basil leaves and drizzled in olive oil and balsamic vinegar, then sprinkled with salt and pepper. "
+        description: "Fresh crisp broccoli, dried cranberries, sunflower seeds, and bacon bits. It’s all tossed in a creamy homemade dressing."
     },
     {
         title: 'Italian Chicken Wrap',
         imageUrl: ItalianChickenWrap,
-        description: "Juicy, ripe tomatoes and creamy mozzarella. Topped with fresh basil leaves and drizzled in olive oil and balsamic vinegar, then sprinkled with salt and pepper. "
+        description: "Crispy flour tortilla loaded with juicy chicken, bacon, lettuce, avocado and cheese drizzled with a delicious spicy Ranch dressing. "
     },
     {
         title: 'Chicken Caesar Wrap',
         imageUrl: ChickenCaesarWrap,
-        description: "Juicy, ripe tomatoes and creamy mozzarella. Topped with fresh basil leaves and drizzled in olive oil and balsamic vinegar, then sprinkled with salt and pepper. "
+        description: "Classic handheld with tender chicken, Parmesan cheese and chopped croutons features the perfect amount of Caesar salad dressing "
     },
     {
         title: 'Spicy Tuna Wrap',
         imageUrl: TunaWrap,
-        description: "Juicy, ripe tomatoes and creamy mozzarella. Topped with fresh basil leaves and drizzled in olive oil and balsamic vinegar, then sprinkled with salt and pepper. "
+        description: "Loaded with tuna, lettuce, spinach, tomatoes, onion, celery and sriracha for that extra hotness"
     },
     {
         title: 'Pulled Beef Wrap',
         imageUrl: pulledBeefWrap,
-        description: "Juicy, ripe tomatoes and creamy mozzarella. Topped with fresh basil leaves and drizzled in olive oil and balsamic vinegar, then sprinkled with salt and pepper. "
+        description: "Whole wheat tortilla loaded with boneless beef chuck roast, jalapeno peppers, chopped onions and tomatoes and drizzled with sour cream and tomato sauce"
     },
 
 ]

@@ -8,7 +8,6 @@ import menuBackgroundHero from './img/menuBackground.jpg'
 import Breakfast from './Breakfast';
 import SaladAndWrap from './SaladAndWrap';
 import Desserts from './Desserts';
-import BowlsAndBurritos from './BowlsAndBurritos';
 import Shakes from './Shakes';
 
 
@@ -63,14 +62,12 @@ function Menu() {
                     <Tab label="Breakfast" />
                     <Tab label="Salads & Wraps" />
                     <Tab label="Desserts" />
-                    <Tab label="Bowls & Burritos" />
                     <Tab label="Shakes" />
                 </Tabs>
                 {selectedTab === 0 && <Breakfast/> }
                 {selectedTab === 1 && <SaladAndWrap/> }
                 {selectedTab === 2 && <Desserts/> }
-                {selectedTab === 3 && <BowlsAndBurritos/> }
-                {selectedTab === 4 && <Shakes/> }
+                {selectedTab === 3 && <Shakes/> }
                 
             </Grid>
         </>
