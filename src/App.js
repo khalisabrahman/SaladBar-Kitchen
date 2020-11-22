@@ -8,6 +8,7 @@ import Story from './Story';
 import Menu from './Menu';
 import Donate from './Donate';
 import Reward from './Reward';
+import Footer from './Footer';
 import { Route, Switch } from 'react-router-dom';
 
 const font = "'Work Sans', sans-serif";
@@ -40,6 +41,7 @@ class App extends Component {
 						<Route exact path='/donate' component={Donate} />
 						<Route exact path='/reward' component={Reward} />
 					</Switch>
+					<Footer />
 				</ThemeProvider>
 			</Fragment>
 		);
