@@ -28,7 +28,7 @@ export default [
     {
         title: 'Lime Lemonade',
         imageUrl: LimeLemonade,
-        description: "Frit"
+        description: ""
     },
     {
         title: 'Matcha Float',

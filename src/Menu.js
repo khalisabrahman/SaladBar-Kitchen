@@ -8,7 +8,7 @@ import menuBackgroundHero from './img/menuBackground.jpg'
 import Breakfast from './Breakfast';
 import SaladAndWrap from './SaladAndWrap';
 import Desserts from './Desserts';
-import Shakes from './Shakes';
+import Drinks from './Drinks';
 
 
 const useStyles = makeStyles((theme) => ({
@@ -62,12 +62,12 @@ function Menu() {
                     <Tab label="Breakfast" />
                     <Tab label="Salads & Wraps" />
                     <Tab label="Desserts" />
-                    <Tab label="Shakes" />
+                    <Tab label="Drinks" />
                 </Tabs>
                 {selectedTab === 0 && <Breakfast/> }
                 {selectedTab === 1 && <SaladAndWrap/> }
                 {selectedTab === 2 && <Desserts/> }
-                {selectedTab === 3 && <Shakes/> }
+                {selectedTab === 3 && <Drinks/> }
                 
             </Grid>
         </>

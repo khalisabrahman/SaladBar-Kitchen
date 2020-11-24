@@ -3,10 +3,10 @@ import MenuList from './constants/ShakesList';
 import Foodcard from './Foodcard';
 import { Grid } from '@material-ui/core';
 
-function Shakes() {
+function Drinks() {
     const getMenuDishCard = (menuObj) => {
 		return (
-			<Grid item xs={12} sm={4}>
+			<Grid item xs={12} sm={6} xl={4}>
 				<Foodcard {...menuObj} />
 			</Grid>
 		);
@@ -23,4 +23,4 @@ function Shakes() {
 	);
 }
 
-export default Shakes
+export default Drinks

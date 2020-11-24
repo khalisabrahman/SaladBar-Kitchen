@@ -6,7 +6,7 @@ import { Grid } from '@material-ui/core';
 function Desserts() {
     const getMenuDishCard = (menuObj) => {
 		return (
-			<Grid item xs={12} sm={4}>
+			<Grid item xs={12} sm={6} xl={4}>
 				<Foodcard {...menuObj} />
 			</Grid>
 		);
