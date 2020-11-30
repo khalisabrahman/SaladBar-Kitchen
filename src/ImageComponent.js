@@ -1,5 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
+import {  Box } from '@material-ui/core'
 
 const useStyles = makeStyles((theme) => ({
     imgStyles: {
@@ -11,7 +12,9 @@ const useStyles = makeStyles((theme) => ({
 function ImageComponent({ src }) {
     const classes = useStyles();
     return (
-        <img src={src} alt='slide-img' className={classes.imgStyles}></img>
+        <img src={src} alt='slide-img' className={classes.imgStyles}>
+            
+        </img>
     )
 }
 

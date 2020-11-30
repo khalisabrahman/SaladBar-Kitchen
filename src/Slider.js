@@ -4,20 +4,21 @@ import ImageComponent from './ImageComponent';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import sliderPic1 from './img/sliderPics/sliderPic1.jpg';
-import sliderPic2 from './img/sliderPics/sliderPic2.jpg'
+import sliderPic2 from './img/sliderPics/sliderPic2.jpg';
+import sliderPic3 from './img/sliderPics/sliderPic3.jpg';
 
 const useStyles = makeStyles((theme) => ({
 	slider: {
 		position: 'relative',
 		width: '100%',
-		height: '100vh',
+		height: '630px',
 		boxSizing: 'border-box',
 		margin: 0,
 		padding: 0,
 		display: 'flex',
-        alignItems: 'center',
+        alignItems: 'flex-start',
         overflow: 'hidden',
-        background: 'black'
+        background: 'white'
 	},
 	slide: {
         position: 'relative',
@@ -63,7 +64,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Slider() {
-    let sliderArr = [<ImageComponent src={sliderPic1} />, <ImageComponent src={sliderPic2} />, 3, 4, 5];
+    let sliderArr = [<ImageComponent src={sliderPic3} />, <ImageComponent src={sliderPic2} />, 3, 4, 5];
     const [x, setX] = useState(0);
     const buttonLeft = () => {
         x === 0 ? setX(-100 * (sliderArr.length -1)) : setX(x + 100)
