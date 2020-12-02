@@ -3,15 +3,16 @@ import { makeStyles } from '@material-ui/core/styles';
 import ImageComponent from './ImageComponent';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
-import sliderPic1 from './img/sliderPics/sliderPic1.jpg';
-import sliderPic2 from './img/sliderPics/sliderPic2.jpg';
-import sliderPic3 from './img/sliderPics/sliderPic3.jpg';
+
+import sliderPic4 from './img/sliderPics/sliderPic4.jpg';
+import sliderPic7 from './img/sliderPics/sliderPic7.jpg';
+import sliderPic6 from './img/sliderPics/sliderPic6.jpg';
 
 const useStyles = makeStyles((theme) => ({
 	slider: {
 		position: 'relative',
 		width: '100%',
-		height: '630px',
+		height: 'auto',
 		boxSizing: 'border-box',
 		margin: 0,
 		padding: 0,
@@ -23,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 	slide: {
         position: 'relative',
 		minWidth: '100%',
-        height: '80%',
+        height: '100%',
         transition: '0.5s',
         overflow: 'hidden'
 	},
@@ -61,10 +62,20 @@ const useStyles = makeStyles((theme) => ({
             color: 'whitesmoke'
 		}
 	},
+	splitContainer: {
+		position: 'relative',
+		width: '100%',
+		height: 'auto',
+		boxSizing: 'border-box',
+		margin: 0,
+		padding: 0,
+		display: 'flex',
+        background: 'white'
+	},
 }));
 
 function Slider() {
-    let sliderArr = [<ImageComponent src={sliderPic3} />, <ImageComponent src={sliderPic2} />, 3, 4, 5];
+    let sliderArr = [<ImageComponent src={sliderPic7} />, <ImageComponent src={sliderPic4} />, <ImageComponent src={sliderPic6} />];
     const [x, setX] = useState(0);
     const buttonLeft = () => {
         x === 0 ? setX(-100 * (sliderArr.length -1)) : setX(x + 100)
@@ -76,21 +87,27 @@ function Slider() {
 	const classes = useStyles();
 	
 	return (
-		<div className={classes.slider}>
-			{sliderArr.map((item, index) => {
-				return (
-					<div key={index} className={classes.slide} style={{transform: `translate(${x}%)`}}>
-						{item}
-					</div>
-				);
-			})}
-			<button className={classes.goLeft} onClick={buttonLeft}>
-				<ChevronLeftIcon fontSize='large'/>
-			</button>
-			<button className={classes.goRight} onClick={buttonRight}>
-				<ChevronRightIcon fontSize='large' />
-			</button>
-		</div>
+		<>
+			<div className={classes.slider}>
+				{sliderArr.map((item, index) => {
+					return (
+						<div key={index} className={classes.slide} style={{transform: `translate(${x}%)`}}>
+							{item}
+						</div>
+					);
+				})}
+				<button className={classes.goLeft} onClick={buttonLeft}>
+					<ChevronLeftIcon fontSize='large'/>
+				</button>
+				<button className={classes.goRight} onClick={buttonRight}>
+					<ChevronRightIcon fontSize='large' />
+				</button>
+			</div>
+			<div className={classes.splitContainer}>
+				<h1>pic 1</h1>
+				<h1>pic 2</h1>
+			</div>
+		</>
 	);
 }
 

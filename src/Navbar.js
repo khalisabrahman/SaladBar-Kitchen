@@ -65,7 +65,7 @@ const useStyles = makeStyles((theme) => ({
 		// },
 	},
 	navContainer: {
-		backgroundColor: '#f7f7f7 ',
+		backgroundColor: '#f7f7f7',
 		[theme.breakpoints.up('xs')]: {
 			padding: '5px',
 			justifyContent: 'space-between',
