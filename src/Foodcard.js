@@ -30,7 +30,7 @@ const useStyles = makeStyles({
 
 function Foodcard(props) {
 	const classes = useStyles();
-	const { avatarSrc, title, subtitle, description, imageUrl } = props;
+	const { title, description, imageUrl } = props;
 
 	return (
 		<Card variant='outlined' className={classes.root}>

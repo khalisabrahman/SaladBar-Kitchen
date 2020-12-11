@@ -66,11 +66,10 @@ const useStyles = makeStyles((theme) => ({
 		position: 'relative',
 		width: '100%',
 		height: 'auto',
-		boxSizing: 'border-box',
-		margin: 0,
-		padding: 0,
 		display: 'flex',
-        background: 'white'
+		background: 'pink',
+		justifyContent: 'space-between'
+		
 	},
 }));
 
@@ -103,10 +102,7 @@ function Slider() {
 					<ChevronRightIcon fontSize='large' />
 				</button>
 			</div>
-			<div className={classes.splitContainer}>
-				<h1>pic 1</h1>
-				<h1>pic 2</h1>
-			</div>
+			
 		</>
 	);
 }
