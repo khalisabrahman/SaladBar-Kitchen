@@ -6,7 +6,7 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 import sliderPic4 from './img/sliderPics/sliderPic4.jpg';
 import sliderPic7 from './img/sliderPics/sliderPic7.jpg';
-import sliderPic6 from './img/sliderPics/sliderPic6.jpg';
+import sliderPic1 from './img/sliderPics/sliderPic1.jpg';
 
 const useStyles = makeStyles((theme) => ({
 	slider: {
@@ -74,7 +74,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 function Slider() {
-    let sliderArr = [<ImageComponent src={sliderPic7} />, <ImageComponent src={sliderPic4} />, <ImageComponent src={sliderPic6} />];
+    let sliderArr = [<ImageComponent src={sliderPic1} />, <ImageComponent src={sliderPic7} />, <ImageComponent src={sliderPic4} />];
     const [x, setX] = useState(0);
     const buttonLeft = () => {
         x === 0 ? setX(-100 * (sliderArr.length -1)) : setX(x + 100)

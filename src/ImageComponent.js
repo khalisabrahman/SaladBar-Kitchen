@@ -64,7 +64,7 @@ function ImageComponent({ src }) {
 	const classes = useStyles();
 	return (
 		<>
-			<Box style={{ backgroundImage: `url(${src})` }} className={classes.hero}>
+			<Box style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(${src})` }} className={classes.hero}>
 				<Box>
 					<h1 className={classes.heroFont}>DELICIOUS FOR EVERY BODY</h1>
 					<p className={classes.heroFontSmall}>
