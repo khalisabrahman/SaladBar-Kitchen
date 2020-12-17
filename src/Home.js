@@ -44,13 +44,13 @@ const useStyles = makeStyles((theme) => ({
 	container: {
 		display: 'grid',
 		height: '1300px',
-		gridTemplateColumns: '1fr 1fr',
-		gridTemplateRows: '1fr 1fr',
-		[theme.breakpoints.down('md')]: {
-			display: 'grid',
-			gridTemplateColumns: '1fr',
-			gridTemplateRows: '1fr 1fr',
-		},
+		gridTemplateColumns: '40% auto',
+		gridTemplateRows: '500px 500px 300px',
+		// [theme.breakpoints.down('md')]: {
+		// 	display: 'grid',
+		// 	gridTemplateColumns: '1fr',
+		// 	gridTemplateRows: '1fr 1fr',
+		// },
 	},
 	itemA: {
 		backgroundImage: `url(${pattern})`,
@@ -108,6 +108,11 @@ const useStyles = makeStyles((theme) => ({
 		// 	height: '50.156px',
 		// },
 	},
+	row3: {
+		textTransform: 'uppercase',
+		textAlign: 'center',
+		gridArea: '3/1/4/3'
+	}
 }));
 
 function Home(props) {
@@ -135,6 +140,11 @@ function Home(props) {
 				</div>
 				<div className={classes.itemB}></div>
 				<div className={classes.itemC}></div>
+				<Box className={classes.row3}>
+					<p style={{fontSize: '70px', marginBottom: 0 }}>Eat Socially</p>
+					<p>Follow us</p> 
+					/* Insert link her */
+				</Box>
 			</div>
 		</div>
 	);
