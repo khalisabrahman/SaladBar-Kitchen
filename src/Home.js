@@ -142,8 +142,8 @@ function Home(props) {
 				<div className={classes.itemC}></div>
 				<Box className={classes.row3}>
 					<p style={{fontSize: '70px', marginBottom: 0 }}>Eat Socially</p>
-					<p>Follow us</p> 
-					/* Insert link her */
+					<p style={{fontFamily: 'Andika New Basic', fontSize: '28px', color: '#F36C21'}}>Follow us<span><a href='/' style={{textDecoration: 'none'}}> @SaladBar</a></span></p>
+					
 				</Box>
 			</div>
 		</div>

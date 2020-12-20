@@ -2,6 +2,7 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import { Box } from '@material-ui/core';
+import { withRouter } from 'react-router-dom';
 
 const useStyles = makeStyles((theme) => ({
 	// imgStyles: {
@@ -60,8 +61,13 @@ const useStyles = makeStyles((theme) => ({
 	},
 }));
 
-function ImageComponent({ src }) {
+function ImageComponent(props) {
 	const classes = useStyles();
+	const { src, history } = props;
+	const handleButtonClick = (pageURL) => {
+		history.push(pageURL);
+	};
+
 	return (
 		<>
 			<Box style={{ backgroundImage: `linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(${src})` }} className={classes.hero}>
@@ -71,7 +77,7 @@ function ImageComponent({ src }) {
 						Get free delivery for first time customers for a limited time only
 					</p>
 					<div className={classes.orderButtonContainer}>
-						<Button className={classes.orderButton}>ORDER NOW</Button>
+						<Button className={classes.orderButton} onClick={() => handleButtonClick('/menu')}>ORDER NOW</Button>
 					</div>
 				</Box>
 			</Box>
@@ -79,4 +85,4 @@ function ImageComponent({ src }) {
 	);
 }
 
-export default ImageComponent;
+export default withRouter(ImageComponent);
