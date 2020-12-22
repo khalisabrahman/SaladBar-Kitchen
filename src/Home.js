@@ -45,7 +45,7 @@ const useStyles = makeStyles((theme) => ({
 		display: 'grid',
 		height: '1300px',
 		gridTemplateColumns: '40% auto',
-		gridTemplateRows: '500px 500px 300px',
+		gridTemplateRows: '500px 500px 300px 300px',
 		// [theme.breakpoints.down('md')]: {
 		// 	display: 'grid',
 		// 	gridTemplateColumns: '1fr',
@@ -112,6 +112,10 @@ const useStyles = makeStyles((theme) => ({
 		textTransform: 'uppercase',
 		textAlign: 'center',
 		gridArea: '3/1/4/3'
+	},
+	photos: {
+		display: 'flex',
+		justifyContent: 'space-around'
 	}
 }));
 
@@ -121,6 +125,8 @@ function Home(props) {
 	const handleButtonClick = (pageURL) => {
 		history.push(pageURL);
 	};
+
+	const array1 = [1,2,3,4,5]
 
 	return (
 		<div>
@@ -141,9 +147,15 @@ function Home(props) {
 				<div className={classes.itemB}></div>
 				<div className={classes.itemC}></div>
 				<Box className={classes.row3}>
-					<p style={{fontSize: '70px', marginBottom: 0 }}>Eat Socially</p>
+					<p style={{fontSize: '70px', marginBottom: 0, fontFamily: 'Roboto', fontWeight: '400',}}>Eat Socially</p>
 					<p style={{fontFamily: 'Andika New Basic', fontSize: '28px', color: '#F36C21'}}>Follow us<span><a href='/' style={{textDecoration: 'none'}}> @SaladBar</a></span></p>
 					
+				</Box>
+				<Box className={classes.photos}>
+					{array1.forEach(element => {
+						console.log('hello')
+						return <Box style={{height: '188px', width: '188px', backgroundColor: 'red'}}>heyaaaaa</Box>
+					})}
 				</Box>
 			</div>
 		</div>
