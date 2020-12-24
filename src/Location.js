@@ -1,49 +1,56 @@
 import React from 'react';
 import { Box } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
+import photoArray from './constants/Photos';
 
-const useStyles = makeStyles({
-    container: {
-        display: 'grid',
-        gridTemplateColumns: 'repeat(5, minmax(115px, 1fr))',
-        gridGap: '1rem'
+const useStyles = makeStyles((theme) => ({
+	container: {
+		display: 'grid',
+		gridTemplateColumns: 'repeat(5, minmax(115px, 1fr))',
+		gridGap: '1rem',
+		[theme.breakpoints.down('md')]: {
+			gridTemplateColumns: 'repeat(2, minmax(115px, 1fr))',
+		},
+	},
+	photo: {
+		maxWidth: '300px',
+		margin: '16px',
+        position: 'relative',
+
+		'&:after': {
+			content: "''",
+			display: 'block',
+			paddingTop: '100%',
+			backgroundColor: 'blue',
+		},
     },
-    photo: {
-        maxWidth: '300px',
-        borderStyle: 'solid',
-        margin: '16px',
-        backgroundColor: 'pink',
-        '&:after': {
-            content: "''",
-            display: 'block',
-            paddingTop: '100%',
-            backgroundColor: 'blue'
-        }
-    }
-
-    
-})
+    content: {
+        position: 'absolute',
+        width: '100%',
+        height: '100%',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+    },
+}));
 
 function Location() {
-    const classes = useStyles();
-    const array1 = [1, 2, 3, 4, 5,6,7,8,9,10];
-    const a = true;
+	const classes = useStyles();
 
-    function photos(photoObject) {
-        return (
-            <Box className={classes.photo}>
-                
-            </Box>
-        )
-    }
+	function photos(photoObject) {
+		return (
+			<Box className={classes.photo}>
+				<Box className={classes.content} style={{backgroundImage: `url(${photoObject.image})`}}></Box>
+			</Box>
+		);
+	}
 
 	return (
 		<div>
-			<h1 >Location </h1>
+			<h1>Location </h1>
 			<Box className={classes.container}>
-				{a && array1.map((photo) => photos(photo))}
+				{photoArray.map((photo) => photos(photo))}
 			</Box>
-            
 		</div>
 	);
 }

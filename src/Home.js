@@ -8,6 +8,7 @@ import donate from './img/donate.jpg';
 import { withRouter } from 'react-router-dom';
 import Button from '@material-ui/core/Button';
 import classNames from 'classname';
+import photoArray from './constants/Photos';
 
 const useStyles = makeStyles((theme) => ({
 	// splitContainer: {
@@ -116,7 +117,37 @@ const useStyles = makeStyles((theme) => ({
 	photos: {
 		display: 'flex',
 		justifyContent: 'space-around'
-	}
+	},
+	container2: {
+		display: 'grid',
+		gridTemplateColumns: 'repeat(5, minmax(115px, 1fr))',
+		gridGap: '1rem',
+		[theme.breakpoints.down('md')]: {
+			gridTemplateColumns: 'repeat(2, minmax(115px, 1fr))',
+		},
+	},
+	photo: {
+		maxWidth: '300px',
+		margin: '16px',
+        position: 'relative',
+
+		'&:after': {
+			content: "''",
+			display: 'block',
+			paddingTop: '100%',
+			backgroundColor: 'blue',
+		},
+    },
+    content: {
+        position: 'absolute',
+        width: '100%',
+        height: '100%',
+        backgroundRepeat: 'no-repeat',
+        backgroundPosition: 'center',
+        backgroundSize: 'cover',
+    }
+
+	
 }));
 
 function Home(props) {
@@ -126,7 +157,13 @@ function Home(props) {
 		history.push(pageURL);
 	};
 
-	const array1 = [1,2,3,4,5]
+	function photos(photoObject) {
+		return (
+			<Box className={classes.photo}>
+				<Box className={classes.content} style={{backgroundImage: `url(${photoObject.image})`}}></Box>
+			</Box>
+		);
+	}
 
 	return (
 		<div>
@@ -147,17 +184,15 @@ function Home(props) {
 				<div className={classes.itemB}></div>
 				<div className={classes.itemC}></div>
 				<Box className={classes.row3}>
-					<p style={{fontSize: '70px', marginBottom: 0, fontFamily: 'Roboto', fontWeight: '400',}}>Eat Socially</p>
-					<p style={{fontFamily: 'Andika New Basic', fontSize: '28px', color: '#F36C21'}}>Follow us<span><a href='/' style={{textDecoration: 'none'}}> @SaladBar</a></span></p>
+					<p style={{fontSize: '70px', marginBottom: '16px', fontFamily: 'Khula'}}>Eat Socially</p>
+					<p style={{fontFamily: 'Khula', fontSize: '28px', color: '#F36C21', marginTop: '8px'}}>Follow us<span><a href='/' style={{textDecoration: 'none', color: '#00BDD0'}}> @SaladBar</a></span></p>
 					
 				</Box>
-				<Box className={classes.photos}>
-					{array1.forEach(element => {
-						console.log('hello')
-						return <Box style={{height: '188px', width: '188px', backgroundColor: 'red'}}>heyaaaaa</Box>
-					})}
-				</Box>
+				
 			</div>
+			<Box className={classes.container2}>
+				{photoArray.map((photo) => photos(photo))}
+			</Box>
 		</div>
 	);
 }
